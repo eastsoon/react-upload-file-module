@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 
@@ -11,10 +10,4 @@ async function init() {
   await worker.start();
 }
 
-init().then(() =>
-  createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  )
-);
+init().then(() => createRoot(document.getElementById("root")!).render(<App />));
