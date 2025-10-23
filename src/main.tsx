@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import { RouterProvider } from "react-router";
+import router from "./router/root.tsx";
 
 async function init() {
   if (!import.meta.env.DEV) {
@@ -10,4 +11,8 @@ async function init() {
   await worker.start();
 }
 
-init().then(() => createRoot(document.getElementById("root")!).render(<App />));
+init().then(() =>
+  createRoot(document.getElementById("root")!).render(
+    <RouterProvider router={router} />
+  )
+);

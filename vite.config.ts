@@ -6,6 +6,6 @@ export default defineConfig(({ mode }) => ({
   base: mode === "production" ? "/file-upload/" : "/",
   plugins: [react(), tailwindcss()],
   server: {
-    port: 3000,
+    port: 3001,
   },
 }));
